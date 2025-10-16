@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Lia Noir — Respira. Inspira. Conecta.</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar" id="topbar" role="banner">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Lia Noir" class="logo">
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir navegación">☰</button>
+    <nav class="nav" id="nav" aria-hidden="true">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#blog">Journal</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+    <!-- INICIO -->
+    <section id="inicio" class="section hero">
+      <h1 class="manifesto">Respira.<br>Inspira.<br>Conecta.</h1>
+      <img src="assets/poster.webp" alt="Movimiento fluido" class="hero-media" />
+      <a class="btn-explorar" href="#sobre" id="explorar">Explorar</a>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section about">
+      <div class="content">
+        <h2>Sobre Lia Noir</h2>
+        <p class="lead">Lia Noir nació del silencio entre las palabras. Creemos que la calma también es acción —una pausa con intención— y que la introspección es un reencuentro.</p>
+        <p>Nuestra filosofía mezcla el enfoque del negro con la ternura del beige y el rosa pastel. Creamos experiencias que invitan a respirar, sentir y volver al presente.</p>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section services">
+      <div class="content">
+        <h2>Servicios &amp; Experiencias</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Sesiones Lia</h3>
+            <p>Conversaciones para resonar con tu voz interior. No buscamos respuestas, facilitamos presencia.</p>
+          </article>
+          <article class="card">
+            <h3>Colección Lia</h3>
+            <p>Objetos y aromas diseñados para anclar el momento presente. Cada pieza es una invitación a detenerse.</p>
+          </article>
+          <article class="card">
+            <h3>Experiencias</h3>
+            <p>Encuentros efímeros que hacen tangible la calma: espacios, rituales y prácticas con intención.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG / JOURNAL -->
+    <section id="blog" class="section journal">
+      <div class="content">
+        <h2>Journal</h2>
+        <div class="posts">
+          <article class="post">
+            <h4>El silencio también comunica</h4>
+            <p class="excerpt">Pequeñas prácticas para descubrir la voz que habita en la pausa.</p>
+          </article>
+          <article class="post">
+            <h4>La belleza del no hacer</h4>
+            <p class="excerpt">Un texto breve sobre la importancia de permitir que las cosas sucedan.</p>
+          </article>
+          <article class="post">
+            <h4>Respirar antes de crear</h4>
+            <p class="excerpt">Cómo la respiración puede transformar procesos creativos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section contact">
+      <div class="content">
+        <h2>Contacto & Comunidad</h2>
+        <p class="lead">Respira. Escríbenos cuando estés lista.</p>
+        <form id="contactForm" class="contact-form" action="#" method="post" novalidate>
+          <label for="name" class="visually-hidden">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+          <label for="email" class="visually-hidden">Correo</label>
+          <input type="email" id="email" name="email" placeholder="Tu correo" required>
+
+          <label for="message" class="visually-hidden">Mensaje</label>
+          <textarea id="message" name="message" rows="4" placeholder="Escribe cuando estés lista..."></textarea>
+
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+
+        <p class="small">Síguenos en</p>
+        <div class="socials" aria-hidden="true">
+          <span class="social">IG</span>
+          <span class="social">X</span>
+          <span class="social">YT</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <p>© <span id="year"></span> Lia Noir — Respira. Inspira. Conecta.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
