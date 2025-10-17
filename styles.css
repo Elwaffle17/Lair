@@ -1,0 +1,250 @@
+:root{
+  --beige:#F5E9DA;
+  --white:#FFFFFF;
+  --black:#000000;
+  --rosa:#E8B7C8;
+  --max-width:900px;
+  --ease:cubic-bezier(.22,.9,.31,1);
+
+}
+
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; font-family:"Lato",system-ui,-apple-system,"Segoe UI",Roboto,Arial; background:var(--beige); color:var(--black); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+
+.visually-hidden {
+  position:absolute!important;
+height:1px;
+  width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:8px 16px;
+  background:rgba(245,233,218,0.6);
+  backdrop-filter: blur(6px);
+  z-index:30;
+  border-bottom:1px solid rgba(0,0,0,0.03);
+}
+
+.brand{display:flex; align-items:center; gap:12px}
+.logo{height:60px; width:auto}
+
+.nav-toggle{
+  background:none;
+  border:none;
+  font-size:50px;
+  padding:8px;
+  color:var(--black)
+  cursor:pointer
+}
+
+.nav{
+  position:fixed;
+  top:79px;
+  right:0;
+  background:var(--beige);
+  
+  width:100%;
+  max-width: 220px;
+  height:calc(100vh - 80px);
+  transform:translateX(110%);
+  transition:transform 320ms var(--ease);
+  box-shadow: -30px 12px 30px rgba(0,0,0,0.1);
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:12px
+}
+
+.nav a{
+  font-size: 25px;
+  color:var(--black);
+  text-decoration:none;
+  font-weight:600;
+  padding:6px 8px
+}
+
+.nav.open{
+  transform:translateX(0)
+}
+
+main{padding-top:76px; padding-bottom:80px; max-width:var(--max-width); margin:0 auto;}
+
+/* SECTIONS */
+.section{padding:36px 18px; display:block}
+.content{max-width:720px; margin:0 auto}
+.hero{display:flex; flex-direction:column; align-items:center; gap:20px; padding-top:44px; padding-bottom:10px}
+.manifesto{font-family:"Playfair Display", serif; font-weight:600; text-align:center; font-size:38px; line-height:0.95; margin:8px 0 6px}
+.hero-media{width:100%; max-width:760px; border-radius:12px; display:block; height:auto; object-fit:cover; box-shadow:0 8px 30px rgba(0,0,0,0.04)}
+
+.btn-explorar{display:inline-block; margin-top:8px; text-decoration:none; border:2px solid var(--black); padding:12px 28px; border-radius:40px; color:var(--black); font-weight:700; background:transparent; transition:all 220ms var(--ease)}
+
+.about .lead{font-size:16px; font-weight:600; margin-bottom:12px}
+.about p{margin:0 0 12px}
+
+.services .cards{display:grid; grid-template-columns:1fr; gap:12px}
+.card{background:var(--white); padding:14px; border-radius:10px; box-shadow:0 8px 26px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.03)}
+.card h3{margin:0 0 6px; font-family:"Playfair Display",serif}
+.card p{margin:0; font-size:14px; color:rgba(0,0,0,0.75)}
+
+.journal .posts{display:flex; flex-direction:column; gap:12px}
+.post{background:transparent; padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.03)}
+.post h4{margin:0 0 6px; font-family:"Playfair Display",serif; font-size:16px}
+.post .excerpt{margin:0; font-size:14px; color:rgba(0,0,0,0.7)}
+
+.contact .contact-form{display:flex; flex-direction:column; gap:12px; margin-top:8px}
+.contact input, .contact textarea{padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.07); font-size:15px; background:rgba(255,255,255,0.9)}
+.btn-primary{background:var(--black); color:var(--white); border:none; padding:12px 18px; border-radius:10px; font-weight:700; cursor:pointer}
+
+/* Footer */
+.footer{padding:20px 18px; text-align:center; font-size:13px; color:rgba(0,0,0,0.6)}
+
+/* Animations */
+.section{opacity:0; transform:translateY(10px); transition:opacity 480ms var(--ease), transform 480ms var(--ease)}
+.section.inview{opacity:1; transform:translateY(0)}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important; animation:none!important}
+}
+
+/* Larger screens adjustments */
+@media(min-width:800px){
+  .manifesto{font-size:64px}
+  .nav{position:static; transform:none; background:transparent; box-shadow:none; width:auto; flex-direction:row; gap:18px; padding:0}
+  .nav-toggle{display:none}
+}
+
+
+
+
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  background-color: #25D366;
+  color: #fff;
+  font-weight: 600;
+  padding: 18px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.whatsapp-btn:hover {
+  background-color: #20ba5a;
+  transform: scale(1.03);
+}
+.whatsapp-btn:active {
+  transform: scale(0.97);
+}
+.wa-icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+.whatsapp-flotante {
+  /* --- Posicionamiento y Dimensiones --- */
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 40px; /* Distancia desde abajo */
+  right: 0px;  /* Distancia desde la derecha */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+
+  /* --- Estilos Visuales --- */
+  background-color: black; /* Color de fondo de WhatsApp */
+  color: #FFF;
+  border-radius: 10px 0 0 10px; /* Lo hace completamente redondo */
+  text-align: center;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4); /* Sombra para dar profundidad */
+  transition: all 0.3s ease; /* Transición suave para el hover */
+
+  /* --- Centrado del SVG con Flexbox --- */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para el ícono SVG dentro del botón */
+.whatsapp-flotante svg {
+  width: 26px;
+  height: 26px;
+  fill: #FFF; /* Color del ícono SVG */
+}
+
+/* Efecto al pasar el cursor por encima */
+/*.whatsapp-flotante:hover {
+  background-color: #128C7E; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.1); /* Agranda ligeramente el botón */
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+
+
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.instagram-carousel {
+  display: flex;
+  overflow-x: auto; /* Habilita el scroll horizontal */
+  scroll-snap-type: x mandatory; /* Ajusta el scroll a cada video */
+  -webkit-overflow-scrolling: touch; /* Scroll suave en móviles */
+  width: 100%;
+  max-width: 90vw;
+  padding-bottom: 20px; /* Espacio para la barra de scroll */
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la barra de scroll */
+.instagram-carousel::-webkit-scrollbar {
+  height: 10px;
+}
+
+.instagram-carousel::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb;
+  border-radius: 10px;
+}
+
+.instagram-carousel::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.video-container {
+  flex: 0 0 auto; /* Evita que los videos se encojan */
+  width: 320px; /* Ancho de un post de Instagram */
+  margin: 20px;
+  scroll-snap-align: center; /* Centra el video al hacer scroll */
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+}
